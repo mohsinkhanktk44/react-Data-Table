@@ -1,0 +1,18 @@
+@import url("../variables.css");
+
+.errorBG {
+  height: 100%;
+  display: flex;
+  background-color: var(--midnight-blue);
+}
+
+.warning {
+  background-color: var(--warning-red);
+  padding: 5px 5px 7px 5px;
+  color: var(--white);
+  font-size: 14px;
+  margin: auto;
+  width: 200px;
+  text-align: center;
+  border-radius: 5px;
+}

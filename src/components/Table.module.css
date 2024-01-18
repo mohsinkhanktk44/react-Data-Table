@@ -1,0 +1,153 @@
+@import url("../variables.css");
+
+.activeColumn::after {
+  content: "•";
+  margin-left: 5px;
+  font-size: 20px;
+  position: absolute;
+  transform: translate(-2px, -2px);
+}
+
+.default + div p {
+  margin: auto;
+}
+
+.default + div {
+  transition: all 0.25s;
+  background-color: rgba(0, 0, 0, 0.3);
+  grid-column: 1/-1;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.default span:first-child {
+  color: var(--midnight-blue);
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.defaultCaret {
+  transform: translate(0, 2px);
+}
+
+.hideRow {
+  max-height: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+.imageWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, calc(50% - 10px));
+  margin: 10px;
+  grid-column-gap: 20px;
+}
+
+.imageWrapper > div {
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--midnight-blue);
+}
+
+.mobileWrapper {
+  position: relative;
+}
+
+.rotateCaret {
+  transform: rotate(90deg) translate(10px, 12px);
+}
+
+.showAll {
+  background-color: var(--white);
+  position: relative;
+  cursor: pointer;
+  border: 1px solid var(--midnight-blue);
+  width: 15px;
+}
+
+.showAll span {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  left: 7px;
+}
+
+.showRow {
+  max-height: 500px !important;
+  margin: 5px 0;
+}
+
+.tableRow,
+.default {
+  display: grid;
+  grid-template-columns: 30px 40px 190px 70px 85px 205px 60px auto;
+  font: normal 14px sans-serif;
+}
+
+.tableBody .tableRow {
+  padding: 5px 10px;
+}
+
+.tableBody .tableRow > span:first-child {
+  font-weight: bold;
+}
+
+.tableBody .tableRow:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.tableFooter {
+  font: normal 13px sans-serif;
+  position: sticky;
+  color: var(--midnight-blue);
+  background-color: var(--baby-blue);
+  border-top: 1px solid var(--midnight-blue);
+  bottom: 0;
+  text-align: right;
+  padding: 5px 10px;
+  max-width: calc(100vw - 62px);
+  left: 0;
+  right: 0;
+}
+
+.wrapper {
+  max-width: 768px;
+  position: relative;
+  margin: 0 auto;
+  height: 600px;
+  overflow: auto;
+  border: 1px solid var(--midnight-blue);
+  color: var(--midnight-blue);
+  border-radius: 4px;
+}
+
+.wrapper .tableHeader {
+  background-color: var(--baby-blue);
+  box-sizing: border-box;
+  font-weight: bold;
+  width: 100%;
+  border-bottom: 1px solid;
+  position: sticky;
+  top: 47px;
+  padding: 10px;
+  z-index: 1;
+}
+
+.wrapper .tableHeader span {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .tableWrapper {
+    position: absolute;
+  }
+
+  .wrapper {
+    margin: 0 20px;
+    max-width: unset;
+  }
+}
